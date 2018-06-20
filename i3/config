@@ -30,8 +30,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -186,15 +186,17 @@ bindsym $mod+x mode "$mode_laucher"
 mode "$mode_laucher" {
     bindsym g exec google-chrome-stable
     bindsym l exec i3lock
+    bindsym k exec Keepassxc
 	bindsym Escape mode "default"
     bindsym Return mode "default"
 }
 
-exec --no-startup-id feh --bg-scale ~/images/owl_coffee_alarm_clock_4778_1920x1080.jpg
+exec --no-startup-id feh --bg-scale ~/images/sea_surf_wave_sunset_84398_1920x1080.jpg
 
 assign [class="URxvt"] $ws1
 assign [class="Google-chrome"] $ws2
+assign [class="Keepassxc"] $ws10
 
-exec --no-startup-id urxvt
+exec --no-startup-id urxvt -e tmux 
 exec --no-startup-id google-chrome-stable
 
