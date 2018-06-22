@@ -186,7 +186,7 @@ bindsym $mod+x mode "$mode_laucher"
 mode "$mode_laucher" {
     bindsym g exec google-chrome-stable
     bindsym l exec i3lock
-    bindsym k exec Keepassxc
+    bindsym k exec keepassxc
 	bindsym Escape mode "default"
     bindsym Return mode "default"
 }
