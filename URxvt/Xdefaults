@@ -102,7 +102,7 @@ URxvt.internalBorder: 0
 URxvt.lineSpace: 0
 
 !! Extensions
-URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select
+URxvt.perl-ext-common: selection-to-clipboard,default,matcher,resize-font,url-select,keyboard-select
 URxvt.colorUL: #4682B4
 !! url-select
 URxvt.keysym.M-u: perl:url-select:select_next
