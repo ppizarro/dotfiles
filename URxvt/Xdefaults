@@ -1,6 +1,17 @@
-! Solarized color scheme for the X Window System
-!
-! http://ethanschoonover.com/solarized
+!##############
+!# Xft settings
+!##############
+
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+!########################################
+!# Color settings (Solarized dark)
+!# http://ethanschoonover.com/solarized
+!########################################
 
 #define S_base03        #002b36
 #define S_base02        #073642
@@ -12,7 +23,8 @@
 #define S_base3         #fdf6e3
 
 *background:            S_base03
-*foreground:            S_base0
+!*foreground:            S_base0
+*foreground:            S_base00
 *fadeColor:             S_base03
 *cursorColor:           S_base1
 *pointerColorBackground:S_base01
@@ -59,17 +71,41 @@
 *color7:                S_base2
 *color15:               S_base3
 
-!-------------------------------------------------------------------------------
-! URxvt settings
-!-------------------------------------------------------------------------------
+!###############################################################################
+!# URxvt settings
+!###############################################################################
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.loginShell:           true
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+!# transparency - true or false (default)
+!#URxvt*transparent: true
+
+!# tint with any color; i.e., blue, red, tomato4, olivedrab2, etc.
+!#   some nice listings are at:
+!#     http://www.nisrv.com/drupal/?q=node/11
+!#     http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
+!#URxvt*tintColor: S_base03
+
+!# shading - 0 to 99 darkens, 101 to 200 lightens.
+!# Do not use with tintColor; just use a darker or lighter color instead.
+URxvt*shading: 15
+
+URxvt*foreground: S_base00
+URxvt*background: S_base03
 
 ! Font
-Rxvt.font: xft:Go Mono for Powerline:style=Regular:size=10:antialias=true:hinting=true, \
-           xft:WenQuanYi Bitmap Song:size=8
-URxvt.boldFont: xft:Go Mono for Powerline:bold:size=10:antialias=true:hinting=true
+URxvt.font: xft:Go Mono for Powerline:style=Regular:size=10, xft:Unifont
+URxvt.boldFont: xft:Go Mono for Powerline:style=Bold:size=10
+URxvt.italicFont: xft:Go Mono for Powerline:style=Italic:size=10
+URxvt.boldItalicFont: xft:Go Mono for Powerline:style=Bold Italic:size=10
 !URxvt.letterSpace: -1
 
 ! Scrollbar
+! Scrollbar style - rxvt (default), plain, next, or xterm
 URxvt.scrollStyle:	rxvt
 URxvt.scrollBar:	false
 URxvt.saveLines:	10000
@@ -92,14 +128,6 @@ URxvt.cursorUnderline:      false
 
 ! Pointer
 URxvt.pointerBlank:         true
-
-URxvt.depth: 32
-URxvt.geometry: 90x30
-URxvt.transparent: false
-! URxvt.urgentOnBell: true
-! URxvt.visualBell: true
-URxvt.internalBorder: 0
-URxvt.lineSpace: 0
 
 !! Extensions
 URxvt.perl-ext-common: selection-to-clipboard,default,matcher,resize-font,url-select,keyboard-select
