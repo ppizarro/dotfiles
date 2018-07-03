@@ -184,9 +184,10 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym $mod+x mode "$mode_laucher"
 
 mode "$mode_laucher" {
-    bindsym g exec google-chrome-stable
+    bindsym c exec google-chrome-stable
     bindsym l exec i3lock
     bindsym k exec keepassxc
+    bindsym s exec spotify
 	bindsym Escape mode "default"
     bindsym Return mode "default"
 }
@@ -195,7 +196,8 @@ exec --no-startup-id feh --bg-scale ~/images/sea_surf_wave_sunset_84398_1920x108
 
 assign [class="URxvt"] $ws1
 assign [class="Google-chrome"] $ws2
-assign [class="Keepassxc"] $ws10
+assign [class="Spotify"] $ws9
+assign [class="keepassxc"] $ws10
 
 exec --no-startup-id urxvt -e tmux 
 exec --no-startup-id google-chrome-stable
