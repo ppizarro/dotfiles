@@ -188,14 +188,22 @@ mode "$mode_laucher" {
     bindsym l exec i3lock
     bindsym k exec keepassxc
     bindsym s exec spotify
+    bindsym f exec pcmanfm
+    bindsym p exec /opt/Postman/Postman
+	bindsym r exec /opt/robo3t/bin/robo3t
+    bindsym b exec run_keybase
 	bindsym Escape mode "default"
     bindsym Return mode "default"
 }
 
-exec --no-startup-id feh --bg-scale ~/images/sea_surf_wave_sunset_84398_1920x1080.jpg
+#exec --no-startup-id feh --bg-scale ~/images/sea_surf_wave_sunset_84398_1920x1080.jpg
+exec --no-startup-id feh --bg-scale ~/images/jungle_girl_lions_jump_bridge_69177_1920x1080.jpg
 
 assign [class="URxvt"] $ws1
 assign [class="Google-chrome"] $ws2
+assign [class="Postman"] $ws3
+assign [class="Robo"] $ws4
+assign [class="Keybase"] $ws5
 assign [class="Spotify"] $ws9
 assign [class="keepassxc"] $ws10
 
