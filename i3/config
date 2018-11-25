@@ -198,7 +198,9 @@ mode "$mode_laucher" {
 
 #exec --no-startup-id feh --bg-scale ~/images/sea_surf_wave_sunset_84398_1920x1080.jpg
 #exec --no-startup-id feh --bg-scale ~/images/jungle_girl_lions_jump_bridge_69177_1920x1080.jpg
-exec --no-startup-id feh --bg-scale ~/images/girl_road_creature_snow_cold_69029_1920x1080.jpg
+#exec --no-startup-id feh --bg-scale ~/images/girl_road_creature_snow_cold_69029_1920x1080.jpg
+#exec --no-startup-id feh --bg-scale ~/images/chainimage-sad-girl-sit-under-tree-anime-scenery-wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/images/415190.jpg
 
 assign [class="URxvt"] $ws1
 assign [class="Google-chrome"] $ws2
