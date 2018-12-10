@@ -1,0 +1,10 @@
+
+alias gotea='cd ~/go/src/gitlab.neoway.com.br/teahupoo'
+alias gopipe='cd ~/go/src/gitlab.neoway.com.br/pipeline'
+alias gogitlab='cd ~/go/src/gitlab.neoway.com.br'
+alias gogithub='cd ~/go/src/github.com'
+alias gosrc='cd ~/go/src'
+alias vi=nvim
+alias vim=nvim
+alias vpn='sudo openvpn --writepid /var/run/openvpn-client/neoway.pid --config /home/pizarro/.config/openvpn/neoway.ovpn'
+

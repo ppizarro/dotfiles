@@ -1,0 +1,19 @@
+# Main exports.
+export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
+export EDITOR="vi"
+export TERM="xterm-256color"
+export PROMPT_EOL_MARK=""
+
+# User settings.
+export FZF_DEFAULT_OPTS="
+    --color=fg:#c0c5ce,bg:#212121,hl:#808080,fg+:#e6e6e6,bg+:#3b3b3b,hl+:#f7c662
+    --color=info:#f7c662,prompt:#6699cc,pointer:#a6bc69,marker:#a6bc69,spinner:#f7c662,header:#6699cc
+"
+# Highlighting inside manpages and elsewhere.
+export LESS_TERMCAP_mb=$'\e[1;31m'          # start blinking
+export LESS_TERMCAP_md=$'\e[1;34m'          # start bold mode
+export LESS_TERMCAP_me=$'\e[0m'             # end all mode
+export LESS_TERMCAP_so=$'\e[38;5;215m'      # start standout mode
+export LESS_TERMCAP_se=$'\e[0m'             # end standout mode
+export LESS_TERMCAP_us=$'\e[4;35m'          # start underline
+export LESS_TERMCAP_ue=$'\e[0m'             # end underline

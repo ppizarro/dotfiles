@@ -1,29 +1,22 @@
 #!/bin/sh
-DIR=`pwd`
 
-#Tmux configuration
-echo "Installing my tmux configuration..."
-rm -f ~/.tmux.conf
-ln -s $PWD/tmux/tmux.conf ~/.tmux.conf
+dotfilesdir=$(pwd)
+dotfiles=(.zshrc .aliases .exports .tmux.conf .wgetrc .xinitrc .Xresources)
+dotfiles_configdir=$(pwd)/.config
+dotfiles_config=(alacritty compton dunst htop i3 i3blocks rofi)
 
-#Xdefaults
-echo "Installing my Xdefault configuration..."
-rm -f ~/.xinitrc
-ln -s $PWD/xorg/xinitrc ~/.xinitrc
-rm -f ~/.Xdefaults
-ln -s $PWD/xorg/Xdefaults ~/.Xdefaults
+# Install config.
+for dots in "${dotfiles[@]}"
+do
+    /bin/rm -rf ~/${dots}
+    /bin/ln -fs "$dotfilesdir/${dots}" ~/
+done
 
-#i3
-echo "Installing my i3 configuration..."
-mkdir -p ~/.config/i3 2> /dev/null
-rm -f ~/.config/i3/config 
-ln -s $PWD/i3/config ~/.config/i3/config
+# Install config to ~/.config.
+mkdir -p ~/.config
+for dots_conf in "${dotfiles_config[@]}"
+do
+    /bin/rm -rf ~/.config/${dots_conf}
+    /bin/ln -fs "$dotfiles_configdir/${dots_conf}" ~/.config/
+done
 
-mkdir -p ~/.config/i3status 2> /dev/null
-rm -f ~/.config/i3status/config 
-ln -s $PWD/i3/i3status.conf ~/.config/i3status/config
-
-rm -f ~/.i3blocks.conf
-ln -s $PWD/i3/i3blocks.conf ~/.i3blocks.conf
-
-echo ""
