@@ -104,3 +104,10 @@ source ~/.exports
 # Aliases.
 source ~/.aliases
 
+# Functions.
+source ~/.functions
+
+source /usr/share/fzf/key-bindings.zsh
+
+source /usr/share/fzf/completion.zsh
+
