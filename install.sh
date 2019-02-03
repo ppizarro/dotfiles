@@ -1,7 +1,7 @@
 #!/bin/sh
 
 dotfilesdir=$(pwd)
-dotfiles=(.zshrc .aliases .exports .tmux.conf .wgetrc .xinitrc .Xresources)
+dotfiles=(.zshrc .aliases .exports .functions .tmux.conf .wgetrc .xinitrc .Xresources)
 dotfiles_configdir=$(pwd)/.config
 dotfiles_config=(alacritty compton dunst htop i3 i3blocks rofi)
 
