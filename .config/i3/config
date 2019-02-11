@@ -288,7 +288,7 @@ mode "laucher" {
     bindsym s workspace $ws6; exec spotify
     bindsym b workspace $ws8; exec keybase-gui
     bindsym k workspace $ws10; exec keepassxc
-    bindsym p exec /opt/Postman/Postman
+    bindsym p exec /opt/postman/Postman
     bindsym r exec /opt/robo3t/bin/robo3t
     bindsym l exec --no-startup-id i3lock-fancy -f Source-Sans-Pro-Regular
     bindsym Escape mode "default"
