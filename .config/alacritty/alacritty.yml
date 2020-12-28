@@ -1,6 +1,6 @@
 env:
-#  TERM: xterm-256color
-  WINIT_HIDPI_FACTOR: 1
+  TERM: xterm-256color
+  WINIT_HIDPI_FACTOR: "1"
 
 window:
   dimensions:
@@ -13,13 +13,11 @@ window:
 
   decorations: full
 
+  dynamic_title: true
+
 scrolling:
   history: 2500
   multiplier: 3
-  faux_multiplier: 3
-  auto_scroll: false
-
-tabspaces: 4
 
 font:
   normal:
@@ -31,7 +29,7 @@ font:
   italic:
     family: Hack
 
-  size: 11.0
+  size: 8.0
 
   offset:
     x: 0
@@ -41,7 +39,8 @@ font:
     x: 0
     y: 0
 
-render_timer: false
+debug:
+  render_timer: false
 
 draw_bold_text_with_bright_colors: true
 
@@ -86,7 +85,7 @@ colors:
     cyan:    '0x66cccc'
     white:   '0xdddddd'
 
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
 
@@ -107,8 +106,6 @@ mouse:
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
   save_to_clipboard: false
-
-dynamic_title: true
 
 cursor:
   style: Block
@@ -132,7 +129,7 @@ key_bindings:
   - { key: Insert,   mods: Shift,   action: PasteSelection               }
   - { key: Key0,     mods: Control, action: ResetFontSize                }
   - { key: Equals,   mods: Control, action: IncreaseFontSize             }
-  - { key: Subtract, mods: Control, action: DecreaseFontSize             }
+  - { key: Minus,    mods: Control, action: DecreaseFontSize             }
   - { key: Home,     mods: Shift,   action: ScrollToTop                  }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
