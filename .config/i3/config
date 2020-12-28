@@ -17,13 +17,13 @@ set $right  semicolon
 # define names for workspaces
 set $ws1    "1:   Terminal "
 set $ws2    "2:  .Chrome "
-set $ws3    "3:   Code "
-set $ws4    "4:   Files "
-set $ws5    "5:   Documents "
+set $ws3    "3:   Neoway "
+set $ws4    "4:   Insomnia "
+set $ws5    "5:   Robot "
 set $ws6    "6:   Media "
 set $ws7    "7:   Design "
 set $ws8    "8:   Chat "
-set $ws9    "9:   General "
+set $ws9    "9:   Socopa "
 set $ws10   "10:  Security "
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -214,8 +214,10 @@ for_window [class="Software-properties-gtk"]        floating enable
 assign [class="Alacritty"]          → $ws1
 assign [class="terminal"]           → $ws1
 assign [class="Google-chrome"]      → $ws2
-assign [class="File-roller"]        → $ws4
 assign [class="Pcmanfm"]            → $ws4
+assign [class="Insomnia"]           → $ws4
+assign [class="Robo"]               → $ws5
+assign [class="File-roller"]        → $ws5
 assign [class="Evince"]             → $ws5
 assign [class="ghostwriter"]        → $ws5
 assign [class="libreoffice"]        → $ws5
@@ -284,33 +286,30 @@ bindsym $mod+x mode "laucher"
 
 mode "laucher" {
     bindsym c workspace $ws2; exec google-chrome-stable
-    bindsym f workspace $ws4; exec pcmanfm
+    bindsym i workspace $ws4; exec insomnia
+    bindsym r workspace $ws5; exec /opt/robo3t/bin/robo3t
+    bindsym f workspace $ws5; exec pcmanfm
     bindsym s workspace $ws6; exec spotify
     bindsym b workspace $ws8; exec keybase-gui
+    bindsym p workspace $ws8; exec pomotroid
     bindsym k workspace $ws10; exec keepassxc
-    bindsym p exec /opt/postman/Postman
-    bindsym r exec /opt/robo3t/bin/robo3t
     bindsym l exec --no-startup-id i3lock-fancy -f Source-Sans-Pro-Regular
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
 
 # shortcut applications
-bindsym $mod+F1                 exec artha
-bindsym $mod+F2 workspace $ws2; exec google-chrome-stable
-bindsym $mod+F3 workspace $ws3; exec code
-bindsym $mod+F4 workspace $ws4; exec pcmanfm
-bindsym $mod+F5 workspace $ws5; exec evince
-bindsym $mod+F6 workspace $ws6; exec spotify
-bindsym $mod+F7 workspace $ws7; exec gimp
-bindsym $mod+F8 workspace $ws8; exec keybase-gui
-bindsym $mod+F9 workspace $ws9; exec go-for-it
+bindsym $mod+F1                   exec artha
+bindsym $mod+F2  workspace $ws2;  exec google-chrome-stable
+bindsym $mod+F4  workspace $ws4;  exec insomnia
+bindsym $mod+F5  workspace $ws5;  exec pcmanfm
+bindsym $mod+F6  workspace $ws6;  exec spotify
+bindsym $mod+F7  workspace $ws7;  exec gimp
+bindsym $mod+F8  workspace $ws8;  exec pomotroid-gui
 bindsym $mod+F10 workspace $ws10; exec keepassxc
-bindsym Print                   exec --no-startup-id gnome-screenshot
+#bindsym Print                     exec --no-startup-id gnome-screenshot -i
+bindsym Print                     exec --no-startup-id flameshot gui
 
-
-assign [class="Postman"] $ws3
-assign [class="Robo"] $ws4
 
 # i3-gaps
 #smart_gaps on
@@ -318,10 +317,12 @@ assign [class="Robo"] $ws4
 #gaps outer 2
 
 # startup applications
-exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -f Source-Sans-Pro-Regular"
+#exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -f Source-Sans-Pro-Regular"
 #exec --no-startup-id pulseaudio --start -D
 exec --no-startup-id alacritty
 exec --no-startup-id google-chrome-stable
+exec --no-startup-id keepassxc
+#exec --no-startup-id pomotroid
 #exec --no-startup-id nm-applet
 #exec --no-startup-id lxpolkit
 #exec --no-startup-id feh --bg-fill ~/images/dark_planet_minimalist.png
@@ -330,3 +331,4 @@ exec --no-startup-id google-chrome-stable
 #exec --no-startup-id feh --bg-scale ~/images/girl_road_creature_snow_cold_69030_1920x1080.jpg
 #exec --no-startup-id feh --bg-scale ~/images/chainimage-sad-girl-sit-under-tree-anime-scenery-wallpaper.jpg
 exec --no-startup-id feh --bg-fill ~/images/415190.jpg
+#exec --no-startup-id feh --bg-fill ~/images/papers.co-nu19-beach-sea-summer-nature-earthview-29-wallpaper.jpg
