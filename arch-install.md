@@ -1,5 +1,6 @@
 # Archlinux Install
 
+```
 dhcpcd
 ip a
 efivar -l
@@ -43,3 +44,4 @@ passwd pizarro
 visudo
 sudo passwd -u root
 curl -o mirrorlist http://www.archlinux.org/mirrorlist?contry=BR
+```
