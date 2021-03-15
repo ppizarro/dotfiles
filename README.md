@@ -1,11 +1,13 @@
 <h1 align="center">dotfiles ❤ ~/</h1>
 
+## Install arch linux
+ - [Installation guide](./arch-install.md)
+
 ## Details
 
 - CLI
     - [Zsh](https://www.zsh.org) - A shell designed for interactive use, although it is also a powerful scripting language.
         - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) - An open source, community-driven framework for managing your Zsh configuration.
-    - [Bash](https://www.gnu.org/software/bash/) - A Unix shell and command language.
     - [tmux](https://github.com/tmux/tmux) - A terminal multiplexer.
     - [Neovim](https://github.com/neovim/neovim) - Vim-fork focused on extensibility and usability.
     - [Git](https://git-scm.com) - A free and open source distributed version control system.
