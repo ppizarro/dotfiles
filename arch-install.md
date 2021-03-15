@@ -9,8 +9,8 @@ dhcpcd
 
 ### Wi-Fi—authenticate to the wireless network using iwctl
 ```
-pacman -S iwd
-iwctl --passphrase passphrase station wlan0 connect SSID
+iwctl station wlan0 connect SSID
+or
 iwctl
 > device list
 > station wlan0 scan
@@ -55,9 +55,9 @@ cfdisk /dev/sdb
 ```
 mkfs.ext4 /dev/sda2
 mkfs.ext4 /dev/sdb1
-mount /dev/sda2 /mnt
+mount /dev/sdb1 /mnt
 mkdir -p /mnt/data
-mount /dev/sdb1 /mnt/data
+mount /dev/sda2 /mnt/data
 ```
 
 ### Installation
@@ -83,7 +83,7 @@ nvim /etc/hosts
 passwd
 pacman -S intel-ucode
 mkinitcpio -P
-pacman -S grub efibootmgr dosfstools
+pacman -S grub efibootmgr dosfstools iwd
 mkfs.fat -F32 /dev/sda1
 mkdir -p /efi
 mount /dev/sda1 /efi
@@ -92,10 +92,25 @@ grub-mkconfig -o /boot/grub/grub.cfg
 exit
 umount -R /mnt
 reboot
-dhcpcd enp2s0
+```
+
+### Post-installation
+```
+iwctl station wlan0 connect SSID
+systemctl start systemd-networkd
+systemctl start systemd-resolved
+ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+curl -o /etc/pacman.d/mirrorlist "https://archlinux.org/mirrorlist/?country=BR&use_mirror_status=on"
+pacman -Syyu
+
 useradd -m -G wheel -s /bin/bash pizarro
 passwd pizarro
+pacman -S sudo
+export EDITOR=nvim
 visudo
-sudo passwd -u root
-curl -o mirrorlist http://www.archlinux.org/mirrorlist?contry=BR
+	## Uncomment to allow members of group wheel to execute any command
+	%wheel ALL=(ALL) ALL
+passwd -l root
+nvim /etc/shadow
+	## clean root password
 ```
