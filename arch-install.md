@@ -113,4 +113,6 @@ visudo
 passwd -l root
 nvim /etc/shadow
 	## clean root password
+pacman -S zsh zsh-completions tmux git htop bat fzf wget lm_sensors lsof strace
+
 ```
