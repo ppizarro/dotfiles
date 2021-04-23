@@ -1,16 +1,2 @@
-
-alias gotea='cd ~/go/src/gitlab.neoway.com.br/teahupoo'
-alias gopipe='cd ~/go/src/gitlab.neoway.com.br/pipeline'
-alias gogitlab='cd ~/go/src/gitlab.neoway.com.br'
-alias gogithub='cd ~/go/src/github.com'
-alias gosrc='cd ~/go/src'
 alias vi=~/bin/nvim.appimage
-alias vpn='sudo openvpn --writepid /var/run/openvpn-client/neoway.pid --config /home/pizarro/.config/openvpn/neoway.ovpn'
-alias whs='sudo netctl start wlp3s0-dragon_plus'
-alias whp='sudo netctl stop wlp3s0-dragon_plus'
-alias wnws='sudo netctl start wlp3s0-Neoway'
-alias wnwp='sudo netctl stop wlp3s0-Neoway'
-alias eths='sudo systemctl start dhcpcd@enp2s0'
-alias ethp='sudo systemctl stop dhcpcd@enp2s0'
-alias irpf2019='java -Xms128M -Xmx512M -jar /opt/IRPF2019/irpf.jar'
 alias ip='ip --color=auto'

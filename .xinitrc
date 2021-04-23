@@ -30,10 +30,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-~/.screenlayout/one.sh
+~/.screenlayout/home.sh
 
 #xrandr --setprovideroutputsource modesetting NVIDIA-0
 #xrandr --auto
 
 exec i3
-

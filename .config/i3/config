@@ -21,9 +21,9 @@ set $ws3    "3:   Neoway "
 set $ws4    "4:   Insomnia "
 set $ws5    "5:   Robot "
 set $ws6    "6:   Media "
-set $ws7    "7:   Design "
+set $ws7    "7:   Zoom "
 set $ws8    "8:   Chat "
-set $ws9    "9:   Socopa "
+set $ws9    "9:   Design "
 set $ws10   "10:  Security "
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -224,11 +224,12 @@ assign [class="libreoffice"]        → $ws5
 assign [class="Audacious"]          → $ws6
 assign [class="vlc"]                → $ws6
 assign [class="Spotify"]            → $ws6
-assign [class="Gimp"]               → $ws7
-assign [class="Inkscape"]           → $ws7
+assign [class="Zoom"]               → $ws7
 assign [class="Hexchat"]            → $ws8
 assign [class="Telegram"]           → $ws8
 assign [class="Keybase"]            → $ws8
+assign [class="Gimp"]               → $ws9
+assign [class="Inkscape"]           → $ws9
 assign [class="Galculator"]         → $ws9
 assign [class="Gnome-font-viewer"]  → $ws9
 assign [class="Go-for-it"]          → $ws9
@@ -290,6 +291,7 @@ mode "laucher" {
     bindsym r workspace $ws5; exec /opt/robo3t/bin/robo3t
     bindsym f workspace $ws5; exec pcmanfm
     bindsym s workspace $ws6; exec spotify
+    bindsym z workspace $ws7; exec zoom
     bindsym b workspace $ws8; exec keybase-gui
     bindsym p workspace $ws8; exec pomotroid
     bindsym k workspace $ws10; exec keepassxc
@@ -302,10 +304,11 @@ mode "laucher" {
 bindsym $mod+F1                   exec artha
 bindsym $mod+F2  workspace $ws2;  exec google-chrome-stable
 bindsym $mod+F4  workspace $ws4;  exec insomnia
-bindsym $mod+F5  workspace $ws5;  exec pcmanfm
-bindsym $mod+F6  workspace $ws6;  exec spotify
-bindsym $mod+F7  workspace $ws7;  exec gimp
+bindsym $mod+F5  workspace $ws5;  exec robo3t
+bindsym $mod+F6  workspace $ws6;  exec pavucontrol
+bindsym $mod+F7  workspace $ws7;  exec zoom
 bindsym $mod+F8  workspace $ws8;  exec pomotroid-gui
+bindsym $mod+F9  workspace $ws9;  exec gimp
 bindsym $mod+F10 workspace $ws10; exec keepassxc
 #bindsym Print                     exec --no-startup-id gnome-screenshot -i
 bindsym Print                     exec --no-startup-id flameshot gui
@@ -326,9 +329,10 @@ exec --no-startup-id keepassxc
 #exec --no-startup-id nm-applet
 #exec --no-startup-id lxpolkit
 #exec --no-startup-id feh --bg-fill ~/images/dark_planet_minimalist.png
-#exec --no-startup-id feh --bg-scale ~/images/sea_surf_wave_sunset_84398_1920x1080.jpg
+exec --no-startup-id feh --bg-scale ~/images/sea_surf_wave_sunset_84398_1920x1080.jpg
 #exec --no-startup-id feh --bg-scale ~/images/jungle_girl_lions_jump_bridge_69177_1920x1080.jpg
-#exec --no-startup-id feh --bg-scale ~/images/girl_road_creature_snow_cold_69030_1920x1080.jpg
+#exec --no-startup-id feh --bg-scale ~/images/girl_road_creature_snow_cold_69029_1920x1080.jpg
 #exec --no-startup-id feh --bg-scale ~/images/chainimage-sad-girl-sit-under-tree-anime-scenery-wallpaper.jpg
-exec --no-startup-id feh --bg-fill ~/images/415190.jpg
+#exec --no-startup-id feh --bg-fill ~/images/415190.jpg
 #exec --no-startup-id feh --bg-fill ~/images/papers.co-nu19-beach-sea-summer-nature-earthview-29-wallpaper.jpg
+#exec --no-startup-id feh --bg-fill ~/images/o-SAIPAN-facebook.jpg

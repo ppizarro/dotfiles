@@ -1,9 +1,9 @@
 # Main exports.
-export PATH="$PATH:$HOME/go/bin:$HOME/bin"
-export EDITOR="vi"
+export PATH="$PATH:$HOME/.local/bin:$HOME/go/bin:$HOME/bin"
+export EDITOR="~/bin/nvim.appimage"
 export PROMPT_EOL_MARK=""
 
-export QT_SCALE_FACTOR=1
+#export QT_SCALE_FACTOR=1
 
 # --files: List files that would be searched but do not search
 # --no-ignore: Do not respect .gitignore, etc...
