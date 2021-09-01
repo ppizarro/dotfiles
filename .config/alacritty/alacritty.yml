@@ -100,7 +100,7 @@ mouse:
 
   hide_when_typing: false
 
-  url:
+  hints:
     launcher: xdg-open
 
 selection:
