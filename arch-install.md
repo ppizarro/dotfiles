@@ -114,5 +114,9 @@ passwd -l root
 nvim /etc/shadow
 	## clean root password
 pacman -S zsh zsh-completions tmux git htop bat fzf wget lm_sensors lsof strace
-
 ```
+
+### Wayland
+
+ - [Wayland](https://wiki.archlinux.org/title/Wayland)
+ - [Full Wayland Setup on Arch Linux](https://www.fosskers.ca/en/blog/wayland)
