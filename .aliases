@@ -1,2 +1,2 @@
-alias vi=~/bin/nvim.appimage
 alias ip='ip --color=auto'
+alias vi=nvim

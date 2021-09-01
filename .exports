@@ -1,9 +1,19 @@
 # Main exports.
-export PATH="$PATH:$HOME/.local/bin:$HOME/go/bin:$HOME/bin"
-export EDITOR="~/bin/nvim.appimage"
+export PATH="$PATH:$HOME/go/bin:$HOME/bin"
+export EDITOR="nvim"
 export PROMPT_EOL_MARK=""
 
 #export QT_SCALE_FACTOR=1
+#export QT_QPA_PLATFORM=xcb
+export QT_QPA_PLATFORM=wayland
+#export QT_QPA_PLATFORMTHEME=qt5ct
+
+export CLUTTER_BACKEND=wayland
+
+#export SDL_VIDEODRIVER=x11
+export SDL_VIDEODRIVER=wayland
+
+#export WINIT_UNIX_BACKEND=x11
 
 # --files: List files that would be searched but do not search
 # --no-ignore: Do not respect .gitignore, etc...
