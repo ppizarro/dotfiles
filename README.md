@@ -17,6 +17,7 @@
     - [wget](https://www.gnu.org/software/wget/) - A free software package for retrieving files using HTTP, HTTPS, FTP, and FTPS.
 - GUI
     - [sway](https://swaywm.org/) - A tiling window manager.
+        - [Sway on Ubuntu](https://llandy3d.github.io/sway-on-ubuntu/) - Installation guide for the latest sway version on Ubuntu 20.04
     - [waybar](https://github.com/Alexays/Waybar) - A topbar very similar to Polybar.
     - [wofi](https://github.com/DaveDavenport/rofi) - A pure GTK (and thus Wayland) customizable application launcher.
     - [mako](https://wayland.emersion.fr/mako/) - A lightweight notification daemon for Wayland compositors that support the layer-shell protocol.
