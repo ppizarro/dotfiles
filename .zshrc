@@ -2,12 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/pizarro/.oh-my-zsh"
+export ZSH="/home/ppizarro/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
@@ -39,7 +40,7 @@ ZSH_THEME="agnoster"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -71,9 +72,9 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  extract
-  ssh-agent
+    git
+    extract
+    ssh-agent
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -103,19 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Environment variables
-source ~/.exports
-
-# Aliase
 source ~/.aliases
-
-# Functions
+source ~/.exports
 source ~/.functions
-
-source /usr/share/fzf/key-bindings.zsh
-
-source /usr/share/fzf/completion.zsh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-

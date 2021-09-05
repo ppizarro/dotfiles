@@ -1,6 +1,6 @@
 # Main exports.
-export PATH="$PATH:$HOME/go/bin:$HOME/bin"
-export EDITOR="nvim"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
+export EDITOR=~/.local/bin/nvim.appimage
 export PROMPT_EOL_MARK=""
 
 #export QT_SCALE_FACTOR=1
@@ -30,3 +30,5 @@ export LESS_TERMCAP_so=$'\e[38;5;215m'      # start standout mode
 export LESS_TERMCAP_se=$'\e[0m'             # end standout mode
 export LESS_TERMCAP_us=$'\e[4;35m'          # start underline
 export LESS_TERMCAP_ue=$'\e[0m'             # end underline
+
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock

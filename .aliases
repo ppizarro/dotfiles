@@ -1,2 +1,3 @@
 alias ip='ip --color=auto'
-alias vi=nvim
+alias vi=~/.local/bin/nvim.appimage
+alias vpn='sudo openvpn --config ~/.config/openvpn/neoway.ovpn'
