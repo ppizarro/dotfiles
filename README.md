@@ -15,6 +15,7 @@
     - [bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration.
     - [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
     - [wget](https://www.gnu.org/software/wget/) - A free software package for retrieving files using HTTP, HTTPS, FTP, and FTPS.
+    - [rg](https://github.com/BurntSushi/ripgrep) - Recursively searches directories for a regex pattern while respecting your gitignore.
 - GUI
     - [sway](https://swaywm.org/) - A tiling window manager.
         - [Sway on Ubuntu](https://llandy3d.github.io/sway-on-ubuntu/) - Installation guide for the latest sway version on Ubuntu 20.04
