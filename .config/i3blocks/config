@@ -2,22 +2,22 @@ color=#f3f4f5
 separator_block_width=15
 markup=none
 
-[openvpn]
-command=workspace/i3blocks-contrib/openvpn/openvpn
-interval=20
-PID_FILE_FORMAT='/var/run/openvpn-client/neoway.pid'
+#[openvpn]
+#command=~/code/i3blocks-contrib/openvpn/openvpn
+#interval=20
+#PID_FILE_FORMAT='/var/run/openvpn-client/neoway.pid'
 
 [volume-pulseaudio]
-command=~/workspace/i3blocks-contrib/volume-pulseaudio/volume-pulseaudio
+command=~/code/i3blocks-contrib/volume-pulseaudio/volume-pulseaudio
 interval=1
 signal=10
+USE_ALSA_NAME=1
 LONG_FORMAT="${SYMB}${VOL}%"
 SHORT_FORMAT="${SYMB}${VOL}%"
 DEFAULT_COLOR="#f3f4f5"
-USE_ALSA_NAME=1
 
 [ram]
-command=echo -n "  "; ~/workspace/i3blocks-contrib/memory/memory | grep -E -o '[0-9]+.[0-9]?G'
+command=echo -n "  "; ~/code/i3blocks-contrib/memory/memory | grep -E -o '[0-9]+.[0-9]?G'
 interval=30
 
 [disk-home]
@@ -28,10 +28,7 @@ interval=30
 command=echo -n " "; date '+%a, %d %b %H:%M'
 interval=5
 
-[battery]
-command=echo -n "  "; ~/workspace/i3blocks-contrib/battery/battery
+[battery2]
+command=~/code/i3blocks-contrib/battery2/battery2
+markup=pango
 interval=30
-#LABEL=BAT
-#LABEL=⚡
-#BAT_NUMBER=0
-

@@ -6,7 +6,7 @@
 set $mod Mod4
 
 # font for window titles and bar
-font pango:Source Sans Pro 10
+font pango:Hack 9
 
 # use these keys for focus, movement, and resize directions
 set $left   j
@@ -16,8 +16,8 @@ set $right  semicolon
 
 # define names for workspaces
 set $ws1    "1:   Terminal "
-set $ws2    "2:  .Chrome "
-set $ws3    "3:   Neoway "
+set $ws2    "2:   Neoway "
+set $ws3    "3:   Chrome "
 set $ws4    "4:   Insomnia "
 set $ws5    "5:   Robot "
 set $ws6    "6:   Media "
@@ -155,8 +155,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # backlight
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 # volume
 bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
@@ -170,7 +170,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # manage i3 session
-bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -f "pango:Hack 9" -m "Do you really want to exit?" -B "    Exit " "i3-msg exit" -B "    Lock " "pkill i3-nagbar && i3lock-fancy -f Source-Sans-Pro-Regular" -B "    Reboot " "pkill i3-nagbar && reboot" -B "    Shutdown " "pkill i3-nagbar && shutdown -h now"
+bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -f "pango:Hack" -m "Do you really want to exit?" -B "    Exit " "i3-msg exit" -B "    Lock " "pkill i3-nagbar && i3lock-fancy -f pango:Hack"
 
 # resize window
 bindsym $mod+r mode "resize"
@@ -199,58 +199,22 @@ for_window [window_role="app"]                      floating enable
 for_window [window_role="pop-up"]                   floating enable
 for_window [window_role="task_dialog"]              floating enable
 for_window [title="Preferences$"]                   floating enable
-for_window [class="File-roller"]                    floating enable
-for_window [class="Galculator"]                     floating enable
-for_window [class="Gcolor2"]                        floating enable
 for_window [class="artha"]                          floating enable
-for_window [class="Go-for-it"]                      floating enable
-for_window [class="Lightdm-gtk-greeter-settings"]   floating enable
-for_window [class="Lxappearance"]                   floating enable
-for_window [class="Menu"]                           floating enable
-for_window [class="Nm-connection-editor"]           floating enable
-for_window [class="Software-properties-gtk"]        floating enable
 
 # assign program to workspace
 assign [class="Alacritty"]          → $ws1
 assign [class="terminal"]           → $ws1
 assign [class="Google-chrome"]      → $ws2
+assign [class="Brave"]              → $ws3
 assign [class="Pcmanfm"]            → $ws4
 assign [class="Insomnia"]           → $ws4
 assign [class="Robo"]               → $ws5
-assign [class="File-roller"]        → $ws5
-assign [class="Evince"]             → $ws5
-assign [class="ghostwriter"]        → $ws5
-assign [class="libreoffice"]        → $ws5
-assign [class="Audacious"]          → $ws6
-assign [class="vlc"]                → $ws6
 assign [class="Spotify"]            → $ws6
 assign [class="Zoom"]               → $ws7
-assign [class="Hexchat"]            → $ws8
 assign [class="Telegram"]           → $ws8
 assign [class="Keybase"]            → $ws8
 assign [class="Gimp"]               → $ws9
-assign [class="Inkscape"]           → $ws9
-assign [class="Galculator"]         → $ws9
-assign [class="Gnome-font-viewer"]  → $ws9
-assign [class="Go-for-it"]          → $ws9
-assign [class="Gucharmap"]          → $ws9
-assign [class="Transmission-gtk"]   → $ws9
 assign [class="keepassxc"]          → $ws10
-assign [class="Bleachbit"]          → $ws10
-assign [class="Bum"]                → $ws10
-assign [class="Dconf-editor"]       → $ws10
-assign [class="Gnome-disks"]        → $ws10
-assign [class="GParted"]            → $ws10
-assign [class="Grub-customizer"]    → $ws10
-assign [class="Hardinfo"]           → $ws10
-assign [class="Lxappearance"]       → $ws10
-assign [class="Lxinput"]            → $ws10
-assign [class="Lxrandr"]            → $ws10
-assign [class="Lxtask"]             → $ws10
-assign [class="Menu"]               → $ws10
-assign [class="Obconf"]             → $ws10
-assign [class="Lightdm-gtk-greeter-settings"]   → $ws10
-assign [class="Software-properties-gtk"]        → $ws10
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #2b83a6 #2b83a6 #ffffff #dddddd   #2b83a6
@@ -288,12 +252,8 @@ bindsym $mod+x mode "laucher"
 mode "laucher" {
     bindsym c workspace $ws2; exec google-chrome-stable
     bindsym i workspace $ws4; exec insomnia
-    bindsym r workspace $ws5; exec /opt/robo3t/bin/robo3t
-    bindsym f workspace $ws5; exec pcmanfm
-    bindsym s workspace $ws6; exec spotify
-    bindsym z workspace $ws7; exec zoom
-    bindsym b workspace $ws8; exec keybase-gui
-    bindsym p workspace $ws8; exec pomotroid
+    bindsym r workspace $ws5; exec /usr/local/bin/robo3t.sh
+    bindsym p workspace $ws6; exec pavucontrol
     bindsym k workspace $ws10; exec keepassxc
     bindsym l exec --no-startup-id i3lock-fancy -f Source-Sans-Pro-Regular
     bindsym Escape mode "default"
@@ -301,16 +261,11 @@ mode "laucher" {
 }
 
 # shortcut applications
-bindsym $mod+F1                   exec artha
 bindsym $mod+F2  workspace $ws2;  exec google-chrome-stable
 bindsym $mod+F4  workspace $ws4;  exec insomnia
-bindsym $mod+F5  workspace $ws5;  exec robo3t
+bindsym $mod+F5  workspace $ws5;  exec /usr/local/bin/robo3t.sh
 bindsym $mod+F6  workspace $ws6;  exec pavucontrol
-bindsym $mod+F7  workspace $ws7;  exec zoom
-bindsym $mod+F8  workspace $ws8;  exec pomotroid-gui
-bindsym $mod+F9  workspace $ws9;  exec gimp
 bindsym $mod+F10 workspace $ws10; exec keepassxc
-#bindsym Print                     exec --no-startup-id gnome-screenshot -i
 bindsym Print                     exec --no-startup-id flameshot gui
 
 
@@ -320,19 +275,7 @@ bindsym Print                     exec --no-startup-id flameshot gui
 #gaps outer 2
 
 # startup applications
-#exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -f Source-Sans-Pro-Regular"
-#exec --no-startup-id pulseaudio --start -D
 exec --no-startup-id alacritty
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id keepassxc
-#exec --no-startup-id pomotroid
-#exec --no-startup-id nm-applet
-#exec --no-startup-id lxpolkit
-#exec --no-startup-id feh --bg-fill ~/images/dark_planet_minimalist.png
-exec --no-startup-id feh --bg-scale ~/images/sea_surf_wave_sunset_84398_1920x1080.jpg
-#exec --no-startup-id feh --bg-scale ~/images/jungle_girl_lions_jump_bridge_69177_1920x1080.jpg
-#exec --no-startup-id feh --bg-scale ~/images/girl_road_creature_snow_cold_69029_1920x1080.jpg
-#exec --no-startup-id feh --bg-scale ~/images/chainimage-sad-girl-sit-under-tree-anime-scenery-wallpaper.jpg
-#exec --no-startup-id feh --bg-fill ~/images/415190.jpg
-#exec --no-startup-id feh --bg-fill ~/images/papers.co-nu19-beach-sea-summer-nature-earthview-29-wallpaper.jpg
-#exec --no-startup-id feh --bg-fill ~/images/o-SAIPAN-facebook.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/sea_surf_wave_sunset_84398_1920x1080.jpg
