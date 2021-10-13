@@ -13,9 +13,10 @@
     - [git](https://git-scm.com) - A free and open source distributed version control system.
     - [htop](https://github.com/hishamhm/htop) - An interactive text-mode process viewer.
     - [bat](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration.
-    - [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
     - [wget](https://www.gnu.org/software/wget/) - A free software package for retrieving files using HTTP, HTTPS, FTP, and FTPS.
+    - [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder.
     - [rg](https://github.com/BurntSushi/ripgrep) - Recursively searches directories for a regex pattern while respecting your gitignore.
+    - [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find'
 - GUI
     - [sway](https://swaywm.org/) - A tiling window manager.
         - [Sway on Ubuntu](https://llandy3d.github.io/sway-on-ubuntu/) - Installation guide for the latest sway version on Ubuntu 20.04
@@ -28,4 +29,3 @@
     - [nerd fonts](https://www.nerdfonts.com/) - Iconic font aggregator, collection, and patcher
     - [awesome](https://github.com/FortAwesome/Font-Awesome) - Iconic font.
     - [powerline](https://github.com/powerline/fonts) - Provides symbols used by Powerline 
-
