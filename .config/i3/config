@@ -17,7 +17,7 @@ set $right  semicolon
 # define names for workspaces
 set $ws1    "1:   Terminal "
 set $ws2    "2:   Neoway "
-set $ws3    "3:   Chrome "
+set $ws3    "3:   Internet "
 set $ws4    "4:   Insomnia "
 set $ws5    "5:   Robot "
 set $ws6    "6:   Media "
