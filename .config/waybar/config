@@ -9,23 +9,24 @@
     // Modules configuration
 
     "sway/workspaces": {
-         "disable-scroll": true,
-    //     "all-outputs": true,
-         "format": "{name}: {icon}",
-         "format-icons": {
-    	     "1": "  Terminal",
-    	     "2": "  www",
-             "3": " ",
-             "4": "  Spotify",
+       "disable-scroll": true,
+       "all-outputs": false,
+       "format": "{name}: {icon}",
+       "format-icons": {
+             "1": "  Terminal",
+             "2": "  Neoway",
+             "3": "  www",
+             "4": "  Insomnia",
+             "5": "  Robo3T",
              "6": "  Media",
              "7": "  Design",
              "8": "  Chat",
-             "9": "  Socopa",
+             "9": "  Spotify",
              "10": " Security",
              "urgent": "",
              "focused": "",
              "default": ""
-         }
+       }
     },
 
     "sway/mode": {
@@ -52,7 +53,7 @@
     },
 
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% "
         //"tooltip": false
     },
 
